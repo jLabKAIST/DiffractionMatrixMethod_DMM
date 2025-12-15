@@ -9,12 +9,25 @@ Matlab code implementation of the Diffraction Matrix Method for calculating the 
 
 ## 📌 Notice (Dependencies)
 
-This code requires **RETICOLO**, a rigorous coupled-wave analysis (RCWA) open-source code developed by J. P. Hugonin and P. Lalanne.
+This code requires the following external tools and toolboxes to function correctly and efficiently.
 
-**Required Action:**
-1.  Please download **RETICOLO V8** or a higher version.
-2.  Unzip the RETICOLO folder to the same directory where `DMM_main.m` or `DMM_2D_main.m` is located.
+### 1. RETICOLO (RCWA Solver)
+This code utilizes **RETICOLO**, a rigorous coupled-wave analysis (RCWA) open-source code developed by J. P. Hugonin and P. Lalanne.
+* **Required Action:**
+  1. Please download **RETICOLO V8** or a higher version.
+  2. Unzip the RETICOLO folder to the same directory where `DMM_main.m` or `DMM_2D_main.m` is located.
 
+### 2. MATLAB Parallel Computing Toolbox (⚡ Critical for Speed)
+This code is optimized using **`parfor`** (parallel for-loops) to handle heavy matrix computations.
+
+> [!IMPORTANT]
+> **⚠️ PERFORMANCE WARNING:**
+> It is **strongly recommended** to install and use the **MATLAB Parallel Computing Toolbox**.
+>
+> * **With Toolbox:** The code runs in parallel, fully utilizing all your CPU cores.
+> * **Without Toolbox:** The code defaults to serial processing, which can be **30 to 50 times slower**.
+>
+> **Please ensure this toolbox is installed to avoid extremely long calculation times.**
 ---
 
 ## ▶️ How to Run This Code
